@@ -9,7 +9,7 @@ import (
 
 	"github.com/pion/quic"
 	"github.com/pion/transport/test"
-	"github.com/pion/webrtc/v2/internal/util"
+	"github.com/brewing-house/webrtc/v2/internal/util"
 )
 
 func TestQUICTransport_E2E(t *testing.T) {
