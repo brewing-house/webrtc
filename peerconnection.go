@@ -1186,8 +1186,8 @@ func (pc *PeerConnection) GetReceivers() []*RTPReceiver {
 
 // GetTransceivers returns the RTCRtpTransceiver that are currently attached to this RTCPeerConnection
 func (pc *PeerConnection) GetTransceivers() []*RTPTransceiver {
-	pc.mu.Lock()
-	defer pc.mu.Unlock()
+	pc.mu.RLock()
+	defer pc.mu.RUnlock()
 
 	return pc.rtpTransceivers
 }
